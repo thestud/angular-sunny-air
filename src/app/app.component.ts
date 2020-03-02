@@ -23,6 +23,14 @@ export class AppComponent {
         (data: Customer) => this.customers = { ...data }, // success path
         error => this.error = error // error path
       );
+    
+    
+    /*
+    this.restService.getCustomers().subscribe(result => {
+        this.customers = result.json() as Customer[];
+    }, error => console.error(error));  
+    */
+
   }
 
 }

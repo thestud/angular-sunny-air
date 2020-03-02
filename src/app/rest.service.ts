@@ -23,7 +23,8 @@ export class RestService {
   constructor(private http: HttpClient) { }
 
   getCustomers() {
-    return this.http.get<Customer>(this.localUrl);
+    let temp =  this.http.get<Customer>(this.localUrl);
+    return temp;
   }
   
 }
