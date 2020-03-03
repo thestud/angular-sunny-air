@@ -4,6 +4,7 @@ import {RestService, Customer} from './rest.service';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
+  providers: [RestService],
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
@@ -23,13 +24,7 @@ export class AppComponent {
         (data: Customer) => this.customers = { ...data }, // success path
         error => this.error = error // error path
       );
-    
-    
-    /*
-    this.restService.getCustomers().subscribe(result => {
-        this.customers = result.json() as Customer[];
-    }, error => console.error(error));  
-    */
+      
 
   }
 

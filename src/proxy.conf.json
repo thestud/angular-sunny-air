@@ -1,0 +1,7 @@
+{
+    "/api/*": {
+        "target": "https://frontiercodingtests.azurewebsites.net/api/accounts/getall",
+        "secure": false,
+        "logLevel": "debug"
+    }
+}
